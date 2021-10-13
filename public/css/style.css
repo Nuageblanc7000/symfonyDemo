@@ -1,0 +1,21 @@
+body{
+    background:grey;
+}
+
+*{
+    padding:0;
+    margin:0;
+    list-style-type: none;
+}
+header{
+    width:100%;
+}
+.page{
+    display:flex;
+    width: 100%;
+}
+.page ul{
+    width: 100%;
+    display:flex;
+    justify-content: space-around;
+}

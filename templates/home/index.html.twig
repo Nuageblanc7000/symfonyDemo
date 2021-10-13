@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+
+{% block body %}
+<header>
+<nav class="page">
+    <ul>
+        <li><a href="{{path('home')}} ">home</a></li>
+        <li>Page2</li>
+        <li>Page3</li>
+        <li>Page4</li>
+    </ul>
+</nav>
+</header>
+
+<div class="example-wrapper">
+    <h1>Hello {{ nom }}! ✅</h1>
+</div>
+<div><a href="{{path('home')}} "></a> </div>
+{% endblock %}
+
+{% block stylesheets %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+{% endblock %}
