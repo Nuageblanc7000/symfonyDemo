@@ -1,21 +1,134 @@
-body{
-    background:grey;
+:root{
+/*fonts*/
+--aNavF:'Advent Pro', sans-serif;
+/*color root*/
+ --colorBgF:#F400FF;
+ --colorHoverA:#F400FF;
+ --colorIcons:#f400ff;
+ /*sizeTitlte*/
+ --h3:1.8rem; 
+ --aNav:1.6rem;
+ /*anim*/
+ --beforeANav:0.3rem solid var(--colorHoverA);
 }
-
+html {
+    font-size: 62.5%;
+}
+body{
+    background:rgb(255, 253, 253);
+}
 *{
     padding:0;
     margin:0;
     list-style-type: none;
+    text-decoration: none;
 }
+.wrapper{
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+}
+/*header start*/
 header{
     width:100%;
+    background-color: rgb(251, 250, 250);
+    box-shadow: rgba(0, 0, 0, 0.356) 10px 0px 5px;
+    background-color: rgb(251, 250, 250);
+    position: sticky;    
 }
-.page{
+header .wrapper{
+
+    display: flex;
+    align-items: center;
+}
+.firstNav{
     display:flex;
-    width: 100%;
+    align-items: center;
+    width: 80%;
+    height: 5rem;
 }
-.page ul{
+.firstNav ul{
     width: 100%;
+    align-items: center;
     display:flex;
     justify-content: space-around;
+}
+.firstNav ul img{
+    object-fit: contain;
+    height: 50px;
+}
+.firstNav ul li a{
+    font-size: var(--aNav);
+    Color:black;
+    position: relative;
+    font-family:var(--aNavF);
+    font-weight: 500;
+}
+.firstNav ul li a:not(.log)::before{ 
+content:"";
+bottom: 0;
+width:0%;
+border-bottom:var(--beforeANav);
+color:var(--colorHoverA);
+transition: 0.5s;
+position: absolute;
+}
+.firstNav ul li a:hover::before{
+width: 100%;
+}
+.bar{
+    display: flex;
+    width:20%;
+    display: flex;
+    justify-content: center;
+}
+
+.bar a:nth-child(1) .bag{
+    background-color: black;
+    margin-right: 0.5rem;
+}
+.bar a .bag{
+    color:white;
+    background:var(--colorIcons);
+    border-radius: 50%;
+    padding:0.1rem;
+    width:2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bar a .bag i{
+color:white;
+user-select: none;
+}
+/*header end*/
+/*footer start*/
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: var(--colorBgF);
+}
+footer h3{
+    font-size:var(--h3);
+    color:rgb(0, 0, 0);
+    padding-top:1rem;
+    padding-bottom:0.8rem;
+    user-select: none;
+}
+footer ul li a{
+    color:white;
+    font-size: var(--aNav);
+    display: block;
+    padding-bottom: 1rem;
+}
+#pageHome .wrapper{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#pageHome .wrapper .article{
+    margin:0.2rem;
 }

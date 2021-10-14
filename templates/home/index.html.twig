@@ -1,30 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
-
+{#% block title %}My Shop{% endblock %#}
 
 {% block body %}
-<header>
-<nav class="page">
-    <ul>
-        <li><a href="{{path('home')}} ">home</a></li>
-        <li>Page2</li>
-        <li>Page3</li>
-        <li>Page4</li>
-    </ul>
-</nav>
-</header>
-
-<div class="example-wrapper">
-    <h1>Hello {{ nom }}! ✅</h1>
+<section id="pageHome">
+<div class="wrapper">
+{% for i in 1..6 %}
+<div class="article">
+<img class="zoom" src="/images/fashion.jpg" alt=""> 
 </div>
-<div><a href="{{path('home')}} "></a> </div>
-{% endblock %}
-
-{% block stylesheets %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
+{% endfor %}
+</div>
+</section>
 {% endblock %}
